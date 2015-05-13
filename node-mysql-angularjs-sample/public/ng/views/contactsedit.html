@@ -1,0 +1,23 @@
+﻿<div class="container">
+    <form class="simple-form" name='form' novalidate>
+
+        <div class="alert alert-info" ng-show="showAlertInfo">{{status}}</div>
+
+        <input ng-hide="contact.id" ng-model="contact.id" />
+        Name:<input type="text" name="name" ng-model="contact.name" class="form-control" required /><br />
+        <span class="label label-danger" ng-show="form.name.$error.required">Name is required</span><br />
+
+        Title:<input type="text" name="title" ng-model="contact.title" class="form-control" required /><br />
+        <span class="label label-danger" ng-show="form.title.$error.required">Email is required</span><br />
+
+        e-mail:<input type="email" name="email_address" ng-model="contact.email_address" class="form-control" required /><br />
+        <span class="label label-danger" ng-show="form.email_address.$error.required">Email is required</span><br />
+
+        <br />
+
+        <a href="#contacts" class=" btn btn-default">Cancelar</a>
+
+        <button type="button" class="btn btn-primary" ng-click="saveContact(contact)" ng-disabled="form.$invalid">Guardar</button>
+    </form>
+
+</div>

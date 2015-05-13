@@ -1,0 +1,20 @@
+﻿<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Email Address</th>            
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="c in contacts">
+            <td>{{c.id}}</td>
+            <td><a href="#/contacts/{{c.id}}" style="display:block;">{{c.name}}</a></td>
+            <td>{{c.title}}</td>
+            <td>{{c.email_address}}</td>            
+        </tr>
+    </tbody>
+</table>
+
+<a href="#contacts/0" class=" btn btn-default">Add Contact</a>
